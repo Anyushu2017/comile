@@ -1,0 +1,19 @@
+.mv {
+  background-image: url("../images/mv_pc.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  .container {
+    height: 100%;
+    h2 {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      transform: translateY(-50%);
+      font-size: 0;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.header {
+  &-reserve {
+    z-index: 2;
+    position: fixed;
+    top: 10vh;
+    right: 5vw;
+    img {
+      max-width: 100px;
+      height: auto;
+    }
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  .navbar {
+    display: block;
+    padding: 90px 0;
+    background-color: $white;
+    &-brand {
+      display: block;
+      font-size: 0;
+      text-align: center;
+      margin: 0 0 4.5rem;
+      padding: 0;
+    }
+    &-nav {
+      .nav-link {
+        position: relative;
+        padding: 0 1rem !important;
+        letter-spacing: 0.2em;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -0.5rem;
+          left: 50%;
+          transform: translateX(calc(-50% - 0.1em));
+          display: block;
+          width: calc(100% - 2rem);
+          height: 1px;
+          background-color: $primary;
+          opacity: 0;
+        }
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
