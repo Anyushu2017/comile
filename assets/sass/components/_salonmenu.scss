@@ -1,0 +1,46 @@
+.salonmenu {
+  h2 {
+    margin-bottom: 5rem;
+  }
+  &__inner {
+    margin-bottom: 5rem;
+    @include media-breakpoint-down(md) {
+      box-sizing: border-box;
+      padding: 0 1rem;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &__price {
+      padding: 1.5rem 0;
+      border-top: solid 1px $primary;
+      &:last-child {
+        border-bottom: solid 1px $primary;
+      }
+      &-ttl {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        @include media-breakpoint-down(md) {
+          display: block;
+        }
+        p {
+          margin: 0;
+          color: $primary;
+        }
+        span {
+          display: block;
+        }
+      }
+      &-genre {
+        font-size: $font-size-sm * 0.9;
+        color: $secondary;
+        margin: 0.5rem 0 0;
+        @include media-breakpoint-down(md) {
+          margin-top: 1.25rem;
+        }
+      }
+    }
+  }
+}

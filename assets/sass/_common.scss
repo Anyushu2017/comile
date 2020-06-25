@@ -1,11 +1,43 @@
 body {
   font-family: "Questrial", "M PLUS 1p", sans-serif;
+  letter-spacing: 0.1em;
 }
-
 img {
   max-width: 100%;
 }
-
 a {
   transition: 0.3s;
+}
+.serif {
+  font-family: serif;
+}
+.sec {
+  padding: 100px 0;
+  @include media-breakpoint-down(md) {
+    padding: 3rem 0;
+  }
+}
+.ttl {
+  &-h2 {
+    text-align: center;
+    color: $primary;
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 2rem;
+    }
+    span {
+      display: block;
+      font-size: $font-size-sm * 0.9;
+      margin-top: 1em;
+    }
+  }
+}
+
+.mv-sub {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 0;
+  text-align: center;
 }

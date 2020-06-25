@@ -18,7 +18,7 @@ $wp_url = get_template_directory_uri(); ?>
 <nav class="navbar navbar-expand-md navbar-light">
 <h1 class="navbar-brand"><a href="<?php echo $home; ?>"><img src="<?php echo $wp_url; ?>/dist/images/logo.png" alt="<?php bloginfo("name"); ?>"></a></h1>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="navbar-toggler-icon"></span>
+<i class="fas fa-bars text-primary"></i>
 </button>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="navbar-nav w-100 justify-content-center">

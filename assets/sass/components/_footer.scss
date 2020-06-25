@@ -1,0 +1,56 @@
+.footer {
+  z-index: 1;
+  position: relative;
+  margin-top: 4rem;
+  background-color: #8c98ab;
+  text-align: center;
+  color: $white;
+  &-cta {
+    z-index: 1;
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+  &-icon {
+    font-size: 5rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+    @include media-breakpoint-down(md) {
+      font-size: 4rem;
+    }
+    a {
+      color: $white;
+    }
+  }
+  &-tel {
+    margin-bottom: 3rem;
+    a {
+      color: $white;
+      font-size: 2.2rem;
+      border-bottom: solid 2px $white;
+      @include media-breakpoint-down(md) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &-address {
+    font-size: $font-size-sm * 0.9;
+    margin: 0;
+    letter-spacing: normal;
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-sm * 0.8;
+    }
+  }
+}
+
+.socket {
+  margin: 0;
+  padding: 2rem;
+  line-height: 1;
+  text-align: center;
+  color: $white;
+  background-color: $primary;
+  font-size: 10px;
+}

@@ -1,0 +1,28 @@
+.access {
+  &-info {
+    position: relative;
+    padding: 100px 0;
+    background: url('../images/bg_access_pc.png') no-repeat center center;
+    background-size: cover;
+    @include media-breakpoint-down(md) {
+      padding: 60px 0;
+    }
+  }
+  &__map {
+    max-width: 900px;
+    margin: 100px auto;
+    @include media-breakpoint-down(md) {
+      margin: 0 auto 60px;
+    }
+    p {
+      margin: 3rem 0 0;
+      font-size: $font-size-sm;
+      line-height: 2;
+      @include media-breakpoint-down(md) {
+        box-sizing: border-box;
+        padding: 0 1rem;
+        font-size: $font-size-sm * 0.9;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+.staff {
+  &__wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+      display: block;
+      box-sizing: border-box;
+      padding: 0 1rem;
+    }
+    &__inner {
+      width: 40%;
+      box-sizing: border-box;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin-bottom: 4rem;
+      }
+      &:nth-child(2n) {
+        margin-left: 20%;
+        margin-bottom: 20%;
+        @include media-breakpoint-down(md) {
+          margin-left: 0;
+          margin-bottom: 4rem;
+        }
+      }
+      &-img {
+        z-index: 1;
+        position: relative;
+        display: block;
+        box-sizing: border-box;
+        i {
+          z-index: 1;
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem;
+          font-size: 3rem;
+          color: $primary;
+        }
+      }
+      &-info {
+        box-sizing: border-box;
+        padding: 2.25rem 0;
+        margin-bottom: 2.25rem;
+        border-bottom: solid 1px $primary;
+        text-align: center;
+      }
+      &-manage {
+        font-size: 1.1rem;
+        color: $primary;
+        margin: 0;
+      }
+      &-name {
+        font-size: 1.8rem;
+        color: $primary;
+        line-height: 1;
+        margin: 1rem 0;
+        letter-spacing: 0.1em;
+      }
+      &-furi {
+        font-size: $font-size-sm;
+        line-height: 1;
+        margin: 0;
+      }
+      &-year {
+        font-size: 1rem;
+        color: $primary;
+        margin-bottom: 2.25rem;
+      }
+      &__messe {
+        &-ttl {
+          font-size: 1rem;
+          color: $primary;
+          margin-bottom: 1rem;
+        }
+        &-txt {
+          margin: 0;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  }
+}
