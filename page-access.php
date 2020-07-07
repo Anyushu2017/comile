@@ -46,7 +46,7 @@ get_header(); ?>
 
 </div>
 
-<script src="//maps.google.com/maps/api/js?key=AIzaSyD_PemI4r8Rl6DHjyB8s5-9KsGJ_rT8UAQ&language=ja"></script>
+<script src="//maps.google.com/maps/api/js?key=AIzaSyA5_k_xrwR0k-bvx3iUeIawpfzof2Br1Pg&language=ja"></script>
 <script>
 var map;
 var brooklyn = new google.maps.LatLng(35.156873, 136.903228);

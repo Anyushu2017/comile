@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="sec">
 <div class="container">
 <div class="text-center">
-<a class="btn btn-primary" href="">2020.1.8 NEW OPEN.<br>名古屋 上前津</a>
+<a class="btn btn-primary" href="" style="pointer-events: none;">2020.1.8 NEW OPEN.<br>名古屋 上前津</a>
 </div>
 <div class="text-center mt-4 d-md-none">
 <a href="https://comile.bionly.net/" target="_blank"><img src="<?php echo $wp_url; ?>/dist/images/btn_reserve.png" alt="予約する"></a>
@@ -56,7 +56,7 @@ $data = mb_strimwidth(strip_tags(get_the_content()), 0, 300, '…');
 <?php echo do_shortcode('[instagram-feed num=4 cols=4 showfollow=false]'); ?>
 </div>
 <div class="mt-5 text-center">
-<a class="btn btn-primary" href="">follow</a>
+<a class="btn btn-primary" href="https://www.instagram.com/comile.hair/" target="_blank">follow</a>
 </div>
 </div>
 </section>
@@ -76,9 +76,22 @@ $posts = get_posts($args);
 foreach ($posts as $post): setup_postdata($post);
 $t = get_the_title();
 $p = get_the_permalink();
+$cat_name = '';
+$cats = get_the_category();
+foreach ($cats as $key => $cat) {
+    if ($cat->name == "Recommended") {
+        continue;
+    } else {
+        $cat_name = $cat->name;
+        break;
+    }
+}
 ?>
 <li>
-<h3><a href="<?php echo $p; ?>"><?php echo $t; ?></a></h3>
+<h3><a class="d-md-flex justify-content-center align-items-center" href="<?php echo $p; ?>">
+<span class="mr-md-3 mb-md-0 mb-2 d-block"><?php echo $cat_name; ?></span>
+<span><?php echo $t; ?></span>
+</a></h3>
 </li>
 <?php endforeach; wp_reset_postdata(); ?>
 </ul>
@@ -139,7 +152,7 @@ if (mb_strlen($content, 'UTF-8') > 150) {
 <br>流行は知りながらも追いすぎるのではなく日々を前向きに楽しむ
 <br>女性たちに寄り添う居心地のよいスタイルを提案していくサロンを目指していきます。</p>
 <div class="mt-4 text-center">
-<a class="btn btn-primary" href="">サロン紹介</a>
+<a class="btn btn-primary" href="<?php echo $home; ?>/about/">サロン紹介</a>
 </div>
 </div>
 </div>
@@ -158,7 +171,7 @@ if (mb_strlen($content, 'UTF-8') > 150) {
 </div>
 
 <div class="mt-5 text-center">
-<a class="btn btn-primary" href="">スタッフ紹介</a>
+<a class="btn btn-primary" href="<?php echo $home; ?>/staff/">スタッフ紹介</a>
 </div>
 </div>
 </section>

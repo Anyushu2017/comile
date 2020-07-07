@@ -11,7 +11,7 @@ $wp_url = get_template_directory_uri(); ?>
 <a class="footer-cta btn btn-primary d-md-none" href="https://comile.bionly.net/">CMILE<br>ご予約はこちら</a>
 <div class="container">
 <p class="footer-icon">
-  <a href="" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.instagram.com/comile.hair/" target="_blank"><i class="fab fa-instagram"></i></a>
 </p>
 <p class="footer-tel"><a href="tel:052-253-5426">tel.052-253-5426</a></p>
 <p class="footer-address">愛知県名古屋市中区上前津１ー２ー３４

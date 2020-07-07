@@ -56,20 +56,24 @@
           padding: 0.5rem 1rem !important;
         }
         &::after {
-          content: "";
-          position: absolute;
-          bottom: -0.5rem;
-          left: 50%;
-          transform: translateX(calc(-50% - 0.1em));
-          display: block;
-          width: calc(100% - 2rem);
-          height: 1px;
-          background-color: $primary;
-          opacity: 0;
+          @include media-breakpoint-up(md) {
+            content: "";
+            position: absolute;
+            bottom: -0.5rem;
+            left: 50%;
+            transform: translateX(calc(-50% - 0.1em));
+            display: block;
+            width: calc(100% - 2rem);
+            height: 1px;
+            background-color: $primary;
+            opacity: 0;
+          }
         }
         &:hover {
           &::after {
-            opacity: 1;
+            @include media-breakpoint-up(md) {
+              opacity: 1;
+            }
           }
         }
       }
